@@ -34,6 +34,7 @@ Simple `Dockerfile` to run the Ruby [Nirvdrum/SVN2Git](https://github.com/nirvdr
 - [coreutils](https://archlinux.org/packages/core/x86_64/coreutils/)
 - [curl](https://archlinux.org/packages/core/x86_64/curl/)
 - [gawk](https://archlinux.org/packages/core/x86_64/gawk/)
+- [sed](https://archlinux.org/packages/core/x86_64/sed/)
 - [wget](https://archlinux.org/packages/extra/x86_64/wget/)
 - [jq](https://archlinux.org/packages/extra/x86_64/jq/)
 - [docker](https://archlinux.org/packages/extra/x86_64/docker/)
