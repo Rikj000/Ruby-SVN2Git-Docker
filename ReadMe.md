@@ -18,7 +18,7 @@ Simple `Dockerfile` to run the Ruby [Nirvdrum/SVN2Git](https://github.com/nirvdr
 
 ## Reasoning
 - [Nirvdrum/SVN2Git](https://github.com/nirvdrum/svn2git) works better then my own [Rikj000/SVN-to-Git-convert](https://github.com/Rikj000/SVN-to-Git-convert) tool,   
-    which I will deprecate in favor of this container.
+    which I will archive in favor of this container.
 - [Nirvdrum/SVN2Git](https://github.com/nirvdrum/svn2git) requires a very old version of Git (`v1.8.3.1`) to successfully convert branches + tags,   
     which is not shipped by Linux distributions anymore, so this container builds it from source.   
     See: https://github.com/nirvdrum/svn2git/blob/v2.4.0/lib/svn2git/migration.rb#L353
@@ -45,7 +45,7 @@ Simple `Dockerfile` to run the Ruby [Nirvdrum/SVN2Git](https://github.com/nirvdr
 wget "$(
     curl -s -H "Accept: application/vnd.github.v3+json" \
     'https://api.github.com/repos/Rikj000/Ruby-SVN2Git-Docker/releases/latest' \
-    | jq .assets[0].browser_download_url)";
+    | jq .assets[0].browser_download_url | sed -e 's/^"//' -e 's/"$//')";
 ```
 
 2. Build svn2git container
